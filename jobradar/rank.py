@@ -64,7 +64,11 @@ def rank(store: Store, profile: Profile, *, active_days: int = 2, now: datetime 
                 sc.excluded = sc.excluded or f"company cap {cap[0]} per {cap[1]}d reached"
             if j.company.lower() in blocked:
                 sc.excluded = sc.excluded or "blocked company"
-            updates.append((sc.score, json.dumps({**sc.to_dict(), "history": hist}), j.uid))
+        # Excluded jobs are written too, or a job that falls out of eligibility
+        # keeps the score it had last run and reads as live in the database.
+        updates.append((sc.score if not sc.excluded else 0.0,
+                        json.dumps({**sc.to_dict(), "history": hist}) if not sc.excluded
+                        else json.dumps({"score": 0, "excluded": sc.excluded}), j.uid))
         out.append(sc)
     store.save_scores(updates)
     out.sort(key=lambda s: (s.excluded is None, s.score), reverse=True)
