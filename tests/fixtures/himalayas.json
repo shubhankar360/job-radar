@@ -1,0 +1,12 @@
+{"updatedAt": 1790970122, "offset": 0, "limit": 20, "totalCount": 2, "jobs": [
+ {"title": "AI Engineer", "excerpt": "Build LLM agents.", "companyName": "Worldco", "companySlug": "worldco", "employmentType": "Full Time",
+  "minSalary": 60000, "maxSalary": 90000, "salaryPeriod": "annual", "seniority": ["Mid-level"], "currency": "USD",
+  "locationRestrictions": [], "timezoneRestrictions": [], "categories": ["AI"], "description": "<p>Build <b>LLM</b> agents in Python.</p>",
+  "pubDate": 1791000000, "expiryDate": 1796000000, "applicationLink": "https://himalayas.app/companies/worldco/jobs/ai-engineer",
+  "guid": "https://himalayas.app/companies/worldco/jobs/ai-engineer"},
+ {"title": "Backend Engineer", "excerpt": "", "companyName": "Indiaco", "companySlug": "indiaco", "employmentType": "Contractor",
+  "minSalary": 40, "maxSalary": 60, "salaryPeriod": "hourly", "seniority": ["Senior"], "currency": "USD",
+  "locationRestrictions": ["India", "Singapore"], "timezoneRestrictions": [5.5], "categories": [], "description": "Python services.",
+  "pubDate": 1790900000, "expiryDate": 1796000000, "applicationLink": "https://himalayas.app/companies/indiaco/jobs/backend-engineer",
+  "guid": "https://himalayas.app/companies/indiaco/jobs/backend-engineer"}
+]}

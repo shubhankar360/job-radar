@@ -1,0 +1,77 @@
+{
+  "_note": "A fictional profile. Copy to $JOBRADAR_HOME/profile.json and replace every fact with your own. The tailor only ever selects and reorders what is written here.",
+  "person": {
+    "name": "Alex Example",
+    "email": "alex@example.com",
+    "phone": "+00 0000 000000",
+    "location": "Pune, India (UTC+5:30)",
+    "remote_line": "Remote, worldwide",
+    "links": [
+      {"label": "github.com/alex-example", "url": "https://github.com/alex-example"},
+      {"label": "alex.example", "url": "https://alex.example", "note": "portfolio"}
+    ]
+  },
+  "preferences": {
+    "country": "india",
+    "utc_offset": 5.5,
+    "comfortable_years": 2,
+    "min_usd": 20000,
+    "internships": true,
+    "home_cities": ["pune"],
+    "preferred_markets": ["united kingdom", "uk", "europe", "united states"],
+    "company_caps": {"Bigco": [3, 180]},
+    "blocked_companies": [],
+    "ai_ban_companies": ["Handwritten Inc"]
+  },
+  "archetypes": {
+    "ai-engineer": {"weight": 30, "title": ["\\b(ai|ml|llm|genai|machine learning)\\b.*\\b(engineer|developer)\\b", "\\bapplied ai\\b"],
+                    "headline": "AI Engineer — LLM Applications · RAG · Python"},
+    "full-stack": {"weight": 22, "title": ["\\bfull[- ]?stack\\b", "\\b(backend|python) (engineer|developer)\\b", "\\bsoftware engineer\\b"],
+                   "headline": "Full-Stack Engineer — Python & TypeScript"}
+  },
+  "summaries": {
+    "default": "Engineer who builds LLM applications and measures them. Built a retrieval service with <b>40 tests</b>.",
+    "full-stack": "Full-stack engineer shipping Python and TypeScript services with tests."
+  },
+  "skills": [
+    {"group": "LLM applications", "items": [
+      {"name": "OpenAI API", "aliases": ["openai"], "weight": 2, "covers": ["OpenAI API"]},
+      {"name": "LLMs", "aliases": ["llm", "large language models"], "weight": 3, "covers": ["LLMs"]},
+      {"name": "RAG", "aliases": ["retrieval-augmented"], "weight": 3, "covers": ["RAG"]}
+    ]},
+    {"group": "Backend", "items": [
+      {"name": "Python", "weight": 3, "covers": ["Python"]},
+      {"name": "FastAPI", "weight": 2, "covers": ["FastAPI"]},
+      {"name": "TypeScript", "weight": 2, "covers": ["TypeScript"]},
+      {"name": "PostgreSQL", "aliases": ["postgres"], "weight": 2, "covers": ["PostgreSQL", "SQL"]}
+    ]},
+    {"group": "Learning now, not yet in production", "learning": true, "items": [
+      {"name": "Kubernetes", "weight": 0}
+    ]}
+  ],
+  "experience": [
+    {"role": "Software Engineer", "org": "Example Studio", "when": "2025 – Present", "min_bullets": 1,
+     "bullets": [
+       {"id": "ex-rag", "priority": 8, "tags": ["RAG", "LLMs", "Python", "FastAPI", "testing"],
+        "text": "Built a <b>retrieval service</b> in FastAPI with citation grounding and <b>40 tests</b>."},
+       {"id": "ex-ui", "priority": 5, "tags": ["TypeScript", "frontend", "React"],
+        "text": "Shipped a TypeScript dashboard used by the support team every day."},
+       {"id": "ex-db", "priority": 4, "tags": ["PostgreSQL", "SQL", "performance"],
+        "text": "Cut a slow PostgreSQL report from 9 s to 300 ms with two indexes."}
+     ]}
+  ],
+  "projects": [
+    {"name": "tiny-evals", "tagline": "LLM evaluation harness", "stack": "Python", "url": "https://github.com/alex-example/tiny-evals",
+     "tags": ["Evaluation", "LLMs", "Python"],
+     "bullets": [{"id": "te-1", "priority": 6, "tags": ["Evaluation", "LLMs"], "text": "Scores model answers against a labelled set with exact-match and rubric metrics."}]}
+  ],
+  "ml_projects": [],
+  "education": [{"what": "BSc Computer Science", "where": "Example University", "when": "2024"}],
+  "additional": ["<b>Languages:</b> English · Hindi"],
+  "answers": {
+    "work_authorization": "Citizen of India; available as a contractor or through an employer of record.",
+    "notice_period": "Two weeks.",
+    "salary_full_time": "USD 40,000–60,000",
+    "letter_logistics": "I'm in Pune (UTC+5:30) and can start in two weeks."
+  }
+}

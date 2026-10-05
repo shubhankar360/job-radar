@@ -1,0 +1,4 @@
+[{"id": "l1", "text": "Python Developer", "categories": {"location": "Remote", "allLocations": ["Remote"], "commitment": "Contract", "team": "Eng"},
+  "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/acme/l1", "applyUrl": "https://jobs.lever.co/acme/l1/apply",
+  "createdAt": 1791000000000, "descriptionPlain": "Write Python.", "lists": [{"text": "Requirements", "content": "<li>3+ years of Python experience</li>"}],
+  "additionalPlain": "", "salaryRange": {"min": 30, "max": 45, "currency": "USD", "interval": "per-hour-wage"}}]

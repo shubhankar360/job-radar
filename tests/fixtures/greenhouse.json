@@ -1,0 +1,10 @@
+{"jobs": [
+ {"id": 101, "title": "Machine Learning Engineer", "absolute_url": "https://boards.greenhouse.io/acme/jobs/101",
+  "location": {"name": "Remote - India"}, "metadata": [{"name": "Location Type", "value": "Remote"}],
+  "updated_at": "2026-10-01T10:00:00-04:00", "first_published": "2026-03-01T10:00:00-04:00", "company_name": "Acme",
+  "content": "&lt;p&gt;Ship ML models.&lt;/p&gt;&lt;p&gt;The base salary range for this role is $90,000—$120,000 USD.&lt;/p&gt;&lt;p&gt;We raised $40M in 2025.&lt;/p&gt;",
+  "departments": [{"name": "Engineering"}]},
+ {"id": 102, "title": "Account Executive", "absolute_url": "https://boards.greenhouse.io/acme/jobs/102",
+  "location": {"name": "New York, NY"}, "metadata": [], "updated_at": "2026-10-01T10:00:00-04:00",
+  "first_published": "2026-09-20T10:00:00-04:00", "content": "Sell.", "departments": []}
+]}

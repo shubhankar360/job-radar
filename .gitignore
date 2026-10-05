@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# personal data never belongs in the repo
+profile.json
+config.json
+*.db
+cache/
+applications/
+out/

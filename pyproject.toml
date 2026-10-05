@@ -1,0 +1,10 @@
+[project]
+name = "job-radar"
+version = "0.1.0"
+description = "Find remote jobs you can actually get, rank them with reasons, and tailor a CV that only says true things."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

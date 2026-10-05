@@ -1,0 +1,14 @@
+{"apiVersion": "1", "jobs": [
+ {"id": "a1", "title": "Software Engineer, Agents", "department": "R&D", "team": "Engineering", "employmentType": "FullTime",
+  "location": "North America", "secondaryLocations": [{"location": "APJ"}, {"location": "EMEA"}], "publishedAt": "2026-09-30T00:00:00.000+00:00",
+  "isListed": true, "isRemote": true, "workplaceType": "Remote", "jobUrl": "https://jobs.ashbyhq.com/acme/a1",
+  "applyUrl": "https://jobs.ashbyhq.com/acme/a1/application", "descriptionPlain": "Build voice agents in Python and TypeScript.",
+  "compensation": {"compensationTiers": [{"tierSummary": "$135K – $300K", "components": [
+     {"compensationType": "Salary", "interval": "1 YEAR", "currencyCode": "USD", "minValue": 135000, "maxValue": 300000},
+     {"compensationType": "EquityCashValue", "interval": "1 YEAR", "currencyCode": "USD", "minValue": null, "maxValue": null}]}]}},
+ {"id": "a2", "title": "Hidden role", "isListed": false, "location": "Remote", "jobUrl": "https://jobs.ashbyhq.com/acme/a2"},
+ {"id": "a3", "title": "Office Engineer", "employmentType": "Intern", "location": "London", "secondaryLocations": [],
+  "publishedAt": "2026-09-01T00:00:00Z", "isListed": true, "isRemote": false, "workplaceType": "OnSite",
+  "jobUrl": "https://jobs.ashbyhq.com/acme/a3", "descriptionPlain": "In our London office.",
+  "compensation": {"scrapeableCompensationSalarySummary": "£40K - £50K"}}
+]}
