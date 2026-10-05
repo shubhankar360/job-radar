@@ -170,6 +170,30 @@ def cmd_log(home: Path, args) -> None:
     print(f"logged {args.company} — {args.title}: {args.status}")
 
 
+def cmd_cv(home: Path, args) -> None:
+    """Untailored CVs, one per role family: the version for job boards,
+    recruiters and a portfolio site. ``--public`` drops the phone number,
+    because a PDF on the open web gets scraped."""
+    import copy
+
+    from .eligibility import Verdict
+    from .models import Job
+
+    profile, _, _ = load(home)
+    if args.public:
+        profile = copy.deepcopy(profile)
+        profile.data["person"]["phone"] = ""
+    out = Path(args.out).expanduser() if args.out else home / "cv"
+    name = slug(profile.person["name"]).replace("-", "_").title()
+    for a in args.archetype or list(profile.archetypes):
+        job = Job(source="cv", source_id=a, company="", title=a, url="")
+        s = Scored(job=job, score=0, verdict=Verdict("yes", ""), archetype=a, matched=[], gaps=[], level="mid",
+                   years=None, usd_min=None, usd_max=None)
+        stem = f"{name}_CV_{a.replace('-', '_')}" + ("_public" if args.public else "")
+        _, pdf, pages = render_cv(tailor(job, s, profile), profile, out, stem)
+        print(f"  {a:<18} {pages} pages  {pdf}")
+
+
 def cmd_daily(home: Path, args) -> None:
     cmd_fetch(home, argparse.Namespace(ttl=args.ttl, offline=False, only=None))
     args.uid, args.force, args.min_score = None, False, args.min_score
@@ -223,6 +247,11 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--note")
     p.add_argument("--date", help="ISO date it was sent, if not today")
 
+    p = sub.add_parser("cv", help="render untailored CVs per role family")
+    p.add_argument("archetype", nargs="*")
+    p.add_argument("--out")
+    p.add_argument("--public", action="store_true", help="omit the phone number")
+
     p = sub.add_parser("daily")
     p.add_argument("--top", type=int, default=8)
     p.add_argument("--min-score", type=float, default=55)
@@ -232,7 +261,7 @@ def main(argv: list[str] | None = None) -> None:
     args = ap.parse_args(argv)
     home = home_dir(args.home)
     {"fetch": cmd_fetch, "rank": cmd_rank, "prepare": cmd_prepare, "dashboard": cmd_dashboard,
-     "serve": cmd_serve, "status": cmd_status, "log": cmd_log, "daily": cmd_daily}[args.cmd](home, args)
+     "serve": cmd_serve, "status": cmd_status, "log": cmd_log, "daily": cmd_daily, "cv": cmd_cv}[args.cmd](home, args)
 
 
 if __name__ == "__main__":
